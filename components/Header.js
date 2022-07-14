@@ -21,7 +21,7 @@ const Header = () => {
         <HeaderItem title="ACCOUNT" Icon={UserIcon} />
       </div>
       <Image
-        className="object-contain"
+        className="object-contain hover:animate-pulse "
         src="https://links.papareact.com/ua6"
         width={200}
         height={100}

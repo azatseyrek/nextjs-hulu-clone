@@ -8,7 +8,7 @@ const Nav = () => {
       <div className="flex px-10 sm:px-20 text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-scroll scrollbar-hide">
         {Object.entries(requests).map(([key, {title, url}]) => (
           <h2
-            className=" last:pr-24 cursor-pointer transition duration-50 transform hover:scale-125 hover:text-white active:text-red-700"
+            className=" last:pr-24 cursor-pointer transition duration-50 transform hover:scale-125 hover:animate-pulse hover:text-white active:text-red-700"
             key={key}
             onClick={() => router.push(`/?genre=${key}`)}
           >

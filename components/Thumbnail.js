@@ -1,12 +1,17 @@
+/* eslint-disable react/display-name */
 import {ThumbUpIcon} from '@heroicons/react/outline';
 import Image from 'next/image';
+import {forwardRef} from 'react';
 
-const Thumbnail = ({key, result}) => {
+const Thumbnail = forwardRef(({key, result}, ref) => {
   const BASE_URL = 'https://image.tmdb.org/t/p/original/';
 
   //   console.log(result);
   return (
-    <div className="group cursor-pointer p-2 transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50 ">
+    <div
+      ref={ref}
+      className="group cursor-pointer p-2 transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50 "
+    >
       <Image
         className="rounded-lg  "
         alt={result.name}
@@ -32,6 +37,6 @@ const Thumbnail = ({key, result}) => {
       </div>
     </div>
   );
-};
+});
 
 export default Thumbnail;
